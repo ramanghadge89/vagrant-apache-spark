@@ -17,15 +17,15 @@ Vagrant.configure("2") do |config|
     echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
     sudo apt-get -y --force-yes install oracle-java8-installer
 
-	apt-get install -y python-pip
-	apt-get install -y dateutil
-	pip install boto3
+    apt-get install -y python-pip
+    apt-get install -y dateutil
+    pip install boto3
 
-	apt-get install -y --force-yes zip
+    apt-get install -y --force-yes zip
 
-	apt-get install -y --force-yes awscli
+    apt-get install -y --force-yes awscli
 
-	mkdir /spark
+    mkdir /spark
     cd /spark/
     wget -q http://mirrors.wuchna.com/apachemirror/spark/spark-2.3.2/spark-2.3.2-bin-hadoop2.7.tgz
     tar xzvf spark-2.3.2-bin-hadoop2.7.tgz
